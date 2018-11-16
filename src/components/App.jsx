@@ -14,14 +14,16 @@ function App(){
   return (
     <div>
       <style global jsx>{`
+        @import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
         * {
-          // font-family: 'Cinzel', serif;
+          font-family: 'Sawarabi Gothic', sans-serif;
           border-radius: 10px;
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-position: center;  
           background-size: cover;
           text-align: center;
+
         }
         body{
           background-image: url(https://static1.squarespace.com/static/54ea3cc6e4b08d8eee454d05/t/56b7570b20c64713aa431759/1454855947975/page-banner-template.jpg?format=1500w);
@@ -29,7 +31,7 @@ function App(){
         div.container {
           margin-top: 5%;
           background-color: #ccc;
-          opacity: .8;
+          opacity: .9;
         }
       `}
       </style>

@@ -7,7 +7,7 @@ const Home = () => {
       <style jsx>{`
       
       `}</style>
-      <h1>Welcome to Kenneth's Tap Room: The Greatest in the West</h1>
+      <h1>Welcome to Epicodus' Tap Room: The Greatest in the West</h1>
       <KegList/>
     </div>
   );
