@@ -22,8 +22,8 @@ const Home = () => {
       {List.map((props, index) => {
         return (
           <div key={index}>
-            <h3>Name: {props.name}</h3>
-            <h3><em>Brewer: {props.brewer}</em></h3>
+            <h3><b>Name: {props.name}</b></h3>
+            <h4><em>Brewer: {props.brewer}</em></h4>
             <h6>Description: {props.description}</h6>
             <h6 id="vol">Alcohol by volume(ABV): {props.abv}%</h6>
             <h6>${props.price}</h6>
