@@ -1,6 +1,7 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
+import Home from './Home';
 
 /*
   import { Link } from 'react-router-dom';
@@ -15,7 +16,7 @@ function App(){
       <style jsx>{`
         font-family: Helvetica;
       `}</style>
-      TapRoomReact
+      <Home/>
       {/* <Switch>
         <Route exact path='/' component={} />
       </Switch> */}
