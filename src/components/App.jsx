@@ -3,6 +3,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import KegList from './Keglist';
+import NavBar from './Navbar';
 
 /*
   import { Link } from 'react-router-dom';
@@ -17,6 +18,8 @@ function App(){
       <style jsx>{`
         font-family: Helvetica;
       `}</style>
+
+      <NavBar/>
       
       <Home/>
       
