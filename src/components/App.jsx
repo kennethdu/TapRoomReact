@@ -5,6 +5,7 @@ import Home from './Home';
 import KegList from './Keglist';
 import NavBar from './Navbar';
 import Happy from './Happy';
+import Employee from './Employee';
 
 /*
   import { Link } from 'react-router-dom';
@@ -42,6 +43,8 @@ function App(){
           <Route exact path='/' component={Home} />
           <Route path='/keglist' component={KegList} />
           <Route path='/happy' component={Happy} />
+          <Route path='/employee' component={Employee} />
+
         </Switch>
       </div>
     </div>

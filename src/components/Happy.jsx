@@ -9,7 +9,16 @@ const Happy = () => {
 
   return (
     <div>
+      <style jsx>{`
+      
+      #red{
+        color: red;
+      }
+      
+      `}
+      </style>
       <h1>Happy Hour List</h1>
+      <h3><b>Between 5PM and 7PM</b></h3>
       {List.map((props, index) => {
         return (
           <div key={index}>
@@ -17,7 +26,7 @@ const Happy = () => {
             <h2><em>Brewer: {props.brewer}</em></h2>
             <h6>Description: {props.description}</h6>
             <h6>Alcohol by volume(ABV): {props.abv}%</h6>
-            <h6>${props.price}</h6>
+            <h6 id="red">${props.price}</h6>
             <h6>{props.remaining}fl. oz remaining</h6>
           </div>
         );

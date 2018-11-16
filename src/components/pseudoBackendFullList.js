@@ -86,6 +86,54 @@ const masterKegList = [
     abv: '5.7',
     price: '6',
     remaining: '48'
+  },
+  {
+    name: 'American Wheat',
+    brewer: 'Chuckanut Brewery',
+    description: 'Pale Wheate Ale - American',
+    abv: '5.2',
+    price: '6',
+    remaining: '0'
+  },
+  {
+    name: 'Divination',
+    brewer: 'Holy Mountain Brewing',
+    description: 'Saison - Oak Foudre w/ Orange Peel',
+    abv: '5.8',
+    price: '6',
+    remaining: '0'
+  },
+  {
+    name: 'Trigo',
+    brewer: 'Founders Brewing Co.',
+    description: 'Lager - IPL(India Pale Lager',
+    abv: '6.3',
+    price: '5.50',
+    remaining: '0'
+  },
+  {
+    name: 'G.O.A.T.U.S',
+    brewer: 'Structures Brewing',
+    description: 'IPA - Black/Cascadian Dark Ale',
+    abv: '7',
+    price: '6',
+    remaining: '0'
+  },
+  {
+    name: 'RPM IPM',
+    brewer: 'Boneyard Beer',
+    description: 'IPA - American',
+    abv: '6.6',
+    price: '5.50',
+    remaining: '0'
+  },
+  {
+    name: 'Zazzle',
+    brewer: 'Cloudburst Brewing',
+    description: '7',
+    abv: '8.3',
+    price: '7',
+    remaining: '0'
   }
 ];
 

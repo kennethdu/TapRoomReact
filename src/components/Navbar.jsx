@@ -31,7 +31,7 @@ const NavBar = () => {
           <NavLink className="nav-item nav-link" to="/happy">
             Happy Hour List
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/keglist">
+          <NavLink className="nav-item nav-link" to="/employee">
             Employee
           </NavLink>
         </div>
