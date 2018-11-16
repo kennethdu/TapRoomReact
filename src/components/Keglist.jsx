@@ -8,15 +8,16 @@ const KegList = () => {
 
   return (  
     <div>
+      <h1>Keg List</h1>
       {List.map((props, index) => {
         return (
           <div key={index}>
-            <h1>Name: {props.name}</h1>
+            <h2>Name: {props.name}</h2>
             <h2><em>Brewer: {props.brewer}</em></h2>
-            <h4>Description: {props.description}</h4>
-            <h4>Alcohol by volume(ABV): {props.abv}%</h4>
-            <h4>${props.price}</h4>
-            <h4>{props.remaining}fl. oz remaining</h4>
+            <h6>Description: {props.description}</h6>
+            <h6>Alcohol by volume(ABV): {props.abv}%</h6>
+            <h6>${props.price}</h6>
+            <h6>{props.remaining}fl. oz remaining</h6>
           </div>
         );
       })}
