@@ -1,22 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getTapList from './pseudoBackendOnTap';
+import getHappyList from './pseudoBackendHappy';
 
-const List = getTapList();
 
-const Home = () => {
+const Happy = () => {
+
+  const List = getHappyList();
+
   return (
-     
-
-    <div className="container">
-      <style jsx>{`
-      #tap{
-        color: red;
-      }
-      
-      `}</style>
-      <h1>Welcome to Epicodus' Tap Room: The Greatest in the West</h1>
-      <h2 id="tap">On Tap</h2>
+    <div>
+      <h1>Happy Hour List</h1>
       {List.map((props, index) => {
         return (
           <div key={index}>
@@ -29,11 +22,11 @@ const Home = () => {
           </div>
         );
       })}
-    </div>    
+    </div>
   );
 };
 
-Home.propTypes = {
+Happy.propTypes = {
   name: PropTypes.string,
   brewer: PropTypes.string,
   description: PropTypes.string,
@@ -41,5 +34,6 @@ Home.propTypes = {
   price: PropTypes.number,
   remaining: PropTypes.number
 };
+
  
-export default Home;
+export default Happy;

@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import KegList from './Keglist';
 import NavBar from './Navbar';
+import Happy from './Happy';
 
 /*
   import { Link } from 'react-router-dom';
@@ -40,6 +41,7 @@ function App(){
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/keglist' component={KegList} />
+          <Route path='/happy' component={Happy} />
         </Switch>
       </div>
     </div>

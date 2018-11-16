@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getKegList from './pseduoBackend';
+import getKegList from './pseudoBackendFullList';
 
 const KegList = () => {
 

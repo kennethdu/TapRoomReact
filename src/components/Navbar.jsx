@@ -28,6 +28,12 @@ const NavBar = () => {
           <NavLink className="nav-item nav-link" to="/keglist">
             Keg List
           </NavLink>
+          <NavLink className="nav-item nav-link" to="/happy">
+            Happy Hour List
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/keglist">
+            Employee
+          </NavLink>
         </div>
       </div>
     </nav>
