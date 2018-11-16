@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <KegList/>
     </div>
-   );
-}
+  );
+};
  
 export default Home;

@@ -1,7 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import getKegList from './pseduoBackend';
-
-
 
 const KegList = () => {
 
@@ -23,6 +22,15 @@ const KegList = () => {
       })}
     </div>
   );
-}
+};
+
+KegList.propTypes = {
+  name: PropTypes.string,
+  brewer: PropTypes.string,
+  description: PropTypes.string,
+  abv: PropTypes.number,
+  price: PropTypes.number,
+  remaining: PropTypes.number
+};
  
 export default KegList;
