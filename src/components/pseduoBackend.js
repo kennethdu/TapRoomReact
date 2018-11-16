@@ -51,5 +51,5 @@
 
 
 export default function getKegList(){
-  return state;
+  return masterKegList;
 }
