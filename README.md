@@ -5,7 +5,7 @@
 ## *Description*
 A Tap Room recreated through React to demonstrate skills learned through Week 1 & Week 2 React
 
-![Screenshot](TapRoomDiagram.png)
+![Screenshot](TapRoomDiagram.PNG)
 
     As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
     As an employee, I want to fill out a form when I tap a new keg to add it to the list. (Don't worry about authenticating employee user accounts yet.)
