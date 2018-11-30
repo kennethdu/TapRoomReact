@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getKegList from './pseudoBackendFullList';
+import Buttons from './Buttons';
+
 
 const KegList = () => {
 
@@ -24,6 +26,7 @@ const KegList = () => {
             <h6>Alcohol by volume(ABV): {props.abv}%</h6>
             <h6 id="green">${props.price}</h6>
             <h6>{props.remaining}fl. oz remaining</h6>
+            <Buttons />
           </div>
         );
       })}
