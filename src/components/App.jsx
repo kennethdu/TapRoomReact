@@ -1,11 +1,8 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
-import KegList from './Keglist';
 import NavBar from './Navbar';
-import Happy from './Happy';
-import Employee from './Employee';
+import NewKegForm from './NewKegForm';
 
 /*
   import { Link } from 'react-router-dom';
@@ -41,10 +38,7 @@ function App(){
       <div className="container">
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/keglist' component={KegList} />
-          <Route path='/happy' component={Happy} />
-          <Route path='/employee' component={Employee} />
-
+          <Route path='/NewKegForm' component={NewKegForm} />
         </Switch>
       </div>
     </div>

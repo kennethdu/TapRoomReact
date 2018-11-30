@@ -25,14 +25,14 @@ const NavBar = () => {
           <NavLink className="nav-item nav-link" to="/">
             Home <span className="sr-only">(current)</span>
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/keglist">
+          {/* <NavLink className="nav-item nav-link" to="/keglist">
             Keg List
           </NavLink>
           <NavLink className="nav-item nav-link" to="/happy">
             Happy Hour List
-          </NavLink>
-          <NavLink className="nav-item nav-link" to="/employee">
-            Employee
+          </NavLink> */}
+          <NavLink className="nav-item nav-link" to="/NewKegForm">
+            Add Keg
           </NavLink>
         </div>
       </div>
