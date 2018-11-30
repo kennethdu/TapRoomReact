@@ -25,13 +25,21 @@ function NewKegForm(props) {
     _name.value = '';
     _brewer.value = '';
     _description.value = '';
-    _abv = '';
-    _price = '';
-    _remaining = '';
+    _abv = null;
+    _price = null;
+    _remaining = null;
   }
 
   return (
-    <div>
+    <div className="container">
+    <style jsx>{`
+    .btn{
+      margin: 10px;
+    }
+    input{
+      margin: 5px;
+    }
+    `}</style>
       <form onSubmit={handleNewKegSubmission}>
         <input
           type='text'
@@ -46,7 +54,7 @@ function NewKegForm(props) {
         <input
           type='text'
           id='description'
-          placeholder='postText'
+          placeholder='description'
           ref={(input) => { _description = input; }} />
         <input
           type='number'
@@ -63,7 +71,7 @@ function NewKegForm(props) {
           id='remaining'
           placeholder='remaining'
           ref={(input) => { _remaining = input; }} />
-        <button type='submit'>SUBMIT</button>
+        <button type='submit' className='btn btn-info'>Submit</button>
       </form>
     </div>
   );

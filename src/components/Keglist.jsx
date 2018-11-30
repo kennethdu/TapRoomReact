@@ -19,15 +19,10 @@ const KegList = () => {
       <h1>Keg List</h1>
       {List.map((props, index) => {
         return (
-          <div key={index}>
-            <h2>Name: {props.name}</h2>
-            <h2><em>Brewer: {props.brewer}</em></h2>
-            <h6>Description: {props.description}</h6>
-            <h6>Alcohol by volume(ABV): {props.abv}%</h6>
-            <h6 id="green">${props.price}</h6>
-            <h6>{props.remaining}fl. oz remaining</h6>
-            <Buttons />
-          </div>
+          <Keg keg={props}
+          key={index}
+          index={index}
+          />
         );
       })}
     </div>

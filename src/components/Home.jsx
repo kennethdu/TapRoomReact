@@ -1,67 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import getKegList from './pseudoBackendFullList';
 import Buttons from './Buttons';
+import Keg from './Keg';
 
+const Home = (props) => {
 
-const List = getKegList();
+  function consoleTest() {
+    props.kegList.map(keg => {
+      console.log(keg);
+    });
+  };
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      masterPostList: []
-    };
-    this.handleAddingNewPostToList = this.handleAddingNewPostToList.bind(this);
+  return (
+    <div className="container">
+      <style jsx>{`
+      #tap{
+        color: DarkBlue;
+      }
 
-  }
+      #vol{
+        color: red;
+      }
+      `}
+      </style>
+      <h1><u>Welcome to Epicodus' Tap Room: The Greatest in the West</u></h1>
+      <h2 id="tap">On Tap</h2>
+      {props.kegList.map((keg, index) => {
+        return(
+        <Keg
+          keg={keg}
+          index={index}
+          key={index}
+          onSellKeg={props.onSellKeg}
+        />
+        )
+      })}
+    </div>
+  );
+};
 
-  handleAddingNewPostToList(newPost) {
-    var newMasterPostList = this.state.masterPostList.slice();
-    newMasterPostList.push(newPost);
-    this.setState({ masterPostList: newMasterPostList });
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <style jsx>{`
-        #tap{
-          color: DarkBlue;
-        }
-
-        #vol{
-          color: red;
-        }
-        `}
-        </style>
-        <h1><u>Welcome to Epicodus' Tap Room: The Greatest in the West</u></h1>
-        <h2 id="tap">On Tap</h2>
-        {List.map((props, index) => { 
-          return (
-            <div key={index}>
-              <h3><b>Name: {props.name}</b></h3>
-              <h4><em>Brewer: {props.brewer}</em></h4>
-              <h6>Description: {props.description}</h6>
-              <h6 id="vol">Alcohol by volume(ABV): {props.abv}%</h6>
-              <h6>${props.price}</h6>
-              <h6>{props.remaining}fl. oz remaining</h6>
-              <Buttons />
-            </div>
-          );
-        })}
-      </div>    
-    );
-  }
-}
 Home.propTypes = {
+  sellKeg: PropTypes.func,
+  kegList: PropTypes.array,
   name: PropTypes.string,
   brewer: PropTypes.string,
   description: PropTypes.string,
   abv: PropTypes.number,
   price: PropTypes.number,
-  remaining: PropTypes.number
+  remaining: PropTypes.number,
 };
 
 export default Home;
-
