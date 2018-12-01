@@ -32,7 +32,7 @@ function NewKegForm(props) {
 
   return (
     <div className="container">
-    <style jsx>{`
+      <style jsx>{`
     .btn{
       margin: 10px;
     }

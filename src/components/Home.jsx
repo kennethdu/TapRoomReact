@@ -1,15 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Buttons from './Buttons';
 import Keg from './Keg';
 
 const Home = (props) => {
-
-  function consoleTest() {
-    props.kegList.map(keg => {
-      console.log(keg);
-    });
-  };
 
   return (
     <div className="container">
@@ -27,19 +20,25 @@ const Home = (props) => {
       <h2 id="tap">On Tap</h2>
       {props.kegList.map((keg, index) => {
         return(
-        <Keg
-          keg={keg}
-          index={index}
-          key={index}
-          onSellKeg={props.onSellKeg}
-        />
-        )
+          <Keg
+            keg={keg}
+            index={index}
+            key={index}
+            onSellKeg={props.onSellKeg}
+            onSellGrowler={props.onSellGrowler}
+            onSellLargeGrowler={props.onSellLargeGrowler}
+          />
+        );
       })}
     </div>
   );
 };
 
 Home.propTypes = {
+  onSellKeg: PropTypes.func,
+  onSellGrowler: PropTypes.func,
+  onSellLargeGrowler: PropTypes.func,
+  sellGrowler: PropTypes.func,
   sellKeg: PropTypes.func,
   kegList: PropTypes.array,
   name: PropTypes.string,
@@ -47,7 +46,7 @@ Home.propTypes = {
   description: PropTypes.string,
   abv: PropTypes.number,
   price: PropTypes.number,
-  remaining: PropTypes.number,
+  remaining: PropTypes.number
 };
 
 export default Home;

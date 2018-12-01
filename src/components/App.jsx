@@ -19,6 +19,8 @@ class App extends React.Component {
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
     this.sellKeg = this.sellKeg.bind(this);
+    this.sellGrowler = this.sellGrowler.bind(this);
+    this.sellLargeGrowler = this.sellLargeGrowler.bind(this);
   }
 
   handleAddingNewKegToList(newKeg) {
@@ -32,17 +34,21 @@ class App extends React.Component {
     var index = keg.indexOf(thisKeg);
     keg[index].remaining--;
     this.setState({kegList: keg});
+  }  
+
+  sellGrowler(thisKeg){
+    var keg = this.state.kegList.slice();
+    var index = keg.indexOf(thisKeg);
+    keg[index].remaining -= 32;
+    this.setState({ kegList: keg });
   }
 
-  
-
-  // sellGrowler(){
-
-  // }
-
-  // sellLargeGrowler(){
-
-  // }
+  sellLargeGrowler(thisKeg){
+    var keg = this.state.kegList.slice();
+    var index = keg.indexOf(thisKeg);
+    keg[index].remaining -= 64;
+    this.setState({ kegList: keg });
+  }
 
 
   render() {
@@ -73,56 +79,17 @@ class App extends React.Component {
         </style>
         <NavBar />
         <Switch>
-          <Route exact path='/' render={() => <Home onSellKeg={this.sellKeg} kegList={this.state.kegList}/>} />
+          <Route exact path='/' render={() => <Home onSellKeg={this.sellKeg} onSellGrowler={this.sellGrowler} onSellLargeGrowler={this.sellLargeGrowler} kegList={this.state.kegList}/>} />
           <Route path='/NewKegForm' render={() => <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
         </Switch>
       </div>
     );
   }
 }
+
 //App.propTypes = {
 //};
 
 export default App;
 
 
-// function App(){
-//   return (
-//     <div>
-//       <style global jsx>{`
-//         @import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
-//         * {
-//           font-family: 'Sawarabi Gothic', sans-serif;
-//           border-radius: 10px;
-//           background-repeat: no-repeat;
-//           background-attachment: fixed;
-//           background-position: center;  
-//           background-size: cover;
-//           text-align: center;
-
-//         }
-//         body{
-//           background-image: url(https://static1.squarespace.com/static/54ea3cc6e4b08d8eee454d05/t/56b7570b20c64713aa431759/1454855947975/page-banner-template.jpg?format=1500w);
-//         }
-//         div.container {
-//           margin-top: 5%;
-//           background-color: #ccc;
-//           opacity: .9;
-//         }
-//       `}
-//       </style>
-//       <NavBar/>
-//       <div className="container">
-//         <Switch>
-// <Route exact path='/' component={Home} />
-// <Route path='/NewKegForm' component={NewKegForm} />
-//         </Switch>
-//       </div>
-//     </div>
-//   );
-// }
-
-// //App.propTypes = {
-// //};
-
-// export default App;

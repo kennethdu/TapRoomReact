@@ -20,8 +20,8 @@ const KegList = () => {
       {List.map((props, index) => {
         return (
           <Keg keg={props}
-          key={index}
-          index={index}
+            key={index}
+            index={index}
           />
         );
       })}
